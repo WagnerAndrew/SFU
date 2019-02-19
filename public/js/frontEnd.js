@@ -7,8 +7,22 @@ $(".createForm").on("click", function (event) {
       type: "GET"
     }).then(
       function() {
-        console.log("updated quote");
         location.assign("/add");
+      }
+    );
+
+});
+
+// BACK TO FILE VIEW CLICK FUNCTION ////////////////////////////////////////
+
+$(".fileView").on("click", function (event) {
+  event.preventDefault();
+
+  $.ajax("/", {
+      type: "GET"
+    }).then(
+      function() {
+        location.assign("/");
       }
     );
 
